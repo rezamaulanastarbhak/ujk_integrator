@@ -25,7 +25,7 @@ jobs:
 
             # Clone atau Pull Repo
             if [ ! -d "project-cloud" ]; then
-              git clone https://github.com/USERNAME_GITHUB/NAMA_REPO.git project-cloud
+              git clone https://github.com/rezamaulanastarbhak/ujk_integrator.git project-cloud
             else
               cd project-cloud
               git pull origin master
