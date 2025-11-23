@@ -1,0 +1,43 @@
+name: Deploy to GCP Compute Engine
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: 22
+          script: |
+            # Pindah ke home directory user
+            cd /home/${{ secrets.USERNAME }}
+
+            # Clone atau Pull Repo
+            if [ ! -d "project-cloud" ]; then
+              git clone https://github.com/USERNAME_GITHUB/NAMA_REPO.git project-cloud
+            else
+              cd project-cloud
+              git pull origin master
+            fi
+
+            cd /home/${{ secrets.USERNAME }}/project-cloud
+
+            # Build & Restart Container Aplikasi
+            # Hapus container lama jika ada agar tidak error conflict
+            docker stop web-app || true
+            docker rm web-app || true
+
+            # Build image baru dan jalankan
+            docker build -t web-image .
+            docker run -d --name web-app -p 80:80 web-image
