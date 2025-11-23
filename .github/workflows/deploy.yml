@@ -3,7 +3,7 @@ name: Deploy to GCP Compute Engine
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -20,24 +20,28 @@ jobs:
           key: ${{ secrets.KEY }}
           port: 22
           script: |
-            # Pindah ke home directory user
+            # Pindah ke folder user
             cd /home/${{ secrets.USERNAME }}
 
-            # Clone atau Pull Repo
-            if [ ! -d "project-cloud" ]; then
-              git clone https://github.com/rezamaulanastarbhak/ujk_integrator.git project-cloud
-            else
-              cd project-cloud
-              git pull origin master
-            fi
+            # TEKNIK BERSIH-BERSIH:
+            # Hapus folder lama sepenuhnya agar download benar-benar fresh
+            # Ini mengatasi masalah jika download sebelumnya macet/corrupt
+            sudo rm -rf project-cloud
 
-            cd /home/${{ secrets.USERNAME }}/project-cloud
+            # Clone ulang (Pastikan REPO SUDAH PUBLIC)
+            # GANTI USERNAME DAN NAMA REPO DI BAWAH INI:
+            git clone https://github.com/rezamaulanastarbhak/ujk_integrator.git project-cloud
+            
+            # Masuk ke folder
+            cd project-cloud
 
-            # Build & Restart Container Aplikasi
-            # Hapus container lama jika ada agar tidak error conflict
-            docker stop web-app || true
-            docker rm web-app || true
-
-            # Build image baru dan jalankan
-            docker build -t web-image .
-            docker run -d --name web-app -p 80:80 web-image
+            # Build & Restart Container dengan SUDO
+            # Pakai sudo agar tidak kena error "permission denied"
+            sudo docker stop web-app || true
+            sudo docker rm web-app || true
+            
+            # Build image baru
+            sudo docker build -t web-image .
+            
+            # Jalankan container
+            sudo docker run -d --name web-app -p 80:80 web-image
