@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio Programmer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111418",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-b-[#283039] px-4 sm:px-6 md:px-10 py-3">
+<div class="flex items-center gap-4 text-black dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clippath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-black dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Portofolio</h2>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">Proyek</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">Tentang Saya</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">Kontak</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Hire Me</span>
+</button>
+<a class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-gray-100 dark:bg-[#283039] text-gray-800 dark:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-gray-200 dark:hover:bg-[#3a444e] transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">code</span>
+</a>
+<a class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-gray-100 dark:bg-[#283039] text-gray-800 dark:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-gray-200 dark:hover:bg-[#3a444e] transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">link</span>
+</a>
+</div>
+</header>
+<main class="flex-1">
+<section class="py-16 sm:py-20 lg:py-24">
+<div class="container mx-auto px-4 sm:px-6">
+<div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+<div class="lg:w-1/2 flex justify-center">
+<div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-center bg-no-repeat aspect-square bg-cover" data-alt="Foto profil seorang programmer bernama Alex" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAaLXItlZpCjZZqDTzVmScHi1_VLyo7b6eslvH-DejM1M6DZQ21yeRuv4dg246gtOe0PwhOXJXx8GPyfJr_CRqn4pAIm-IDarjnyqL9qs2oNuaJKoKM_pNGJz98uXnhBQ1g1A-YIJj-W9cLU2e3cxI6SwFWyZwftEAIVLtWzdH8j2glsWuKrlhjZcdyUDrQGbSny1Ot9KLoFHsc3383DWniRqnQljQgrKiL36ipqYRTF4e-kpjftwObdF6w2hixuBMj-dicWx8j5PIl");'></div>
+</div>
+<div class="lg:w-1/2 text-center lg:text-left">
+<h1 class="text-black dark:text-white text-4xl sm:text-5xl font-black leading-tight tracking-[-0.033em]">
+                                            Hai, saya Reza M, seorang Full-Stack Web Developer.
+                                        </h1>
+<p class="text-gray-600 dark:text-gray-300 text-base sm:text-lg font-normal leading-normal mt-4">
+                                            Saya berspesialisasi dalam membangun aplikasi web yang modern, responsif, dan ramah pengguna. Semangat saya adalah mengubah ide menjadi kenyataan melalui kode.
+                                        </p>
+<div class="mt-8 flex-wrap gap-4 flex justify-center lg:justify-start">
+<button class="flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Lihat Proyek Saya</span>
+</button>
+<button class="flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-gray-100 dark:bg-[#283039] text-black dark:text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-200 dark:hover:bg-[#3a444e] transition-colors">
+<span class="truncate">Hubungi Saya</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-[#151d25]">
+<div class="container mx-auto px-4 sm:px-6">
+<h2 class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] text-center">Proyek Unggulan</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+<div class="flex flex-col gap-4 bg-background-light dark:bg-background-dark p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Laptop di atas meja dengan secangkir kopi, menampilkan kode" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBUqfTzAS2pDDIHtLQFf_RTtZHRPjcnvGrwhTJy8MSnFsbhQpqOtDCAKdX60Yz7iepC-OtLRHrtpKySqMR4FTG2lq35Lb9d2f-SRhB9K_xlj3E1FsDH0C4PEgomy5urZIxDu-dV_h4A3xaO0GqXMk4tLdjbkNfBRUlkvhJ1HzbhbXf7Py2A0CVzvZEhzWxcLEDUpJhp9m16pJOfybY080nVBv5ulku6jwzqTMic8E3dwfP-l0hDYj1-XtCnk0B3r3xvFRVdTkSyeZ3')"></div>
+<div>
+<p class="text-black dark:text-white text-lg font-semibold leading-normal">Judul Proyek Satu</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal mt-2">Deskripsi singkat proyek pertama, menyoroti teknologi yang digunakan dan tujuannya.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 bg-background-light dark:bg-background-dark p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Beberapa perangkat menampilkan desain web responsif" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDoZLXB-km-AL_rcuQh-bpHCH5NlXPH6wLe6AAPA0DAyqINHEXd1SUKs9wHoavyJ8lmwFt9-86hKsTwPbVLglaK094c44Q5A1Uwv08Y8vd2bjEwvCIJ_FIDMarvA3kss9l9-GFvI0TXGCe-KhOe_gYSlcEeYsRrWGFFkrjUBEeLwqbAArJsfJE1Io5tdR225Z4Q-PZjAOHjjVsJSm0bbYTvzFjP-17KPD2DFwOZjiEY7061pRcY4KHHi0lczkByjzeb0zbaTlvLMQqj')"></div>
+<div>
+<p class="text-black dark:text-white text-lg font-semibold leading-normal">Judul Proyek Dua</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal mt-2">Deskripsi singkat proyek kedua, menyoroti teknologi yang digunakan dan tujuannya.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 bg-background-light dark:bg-background-dark p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Tampilan dekat kode pada monitor komputer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7R1jkaHb4i1ektrrF1w0Y-OLLHDOi88SiRkMmhl3Vf95WRgtSSST3HIvyBVFqDcrshCZkoymHahhZQut7LnjcHlFwBij9EHVgHcuEigA-xYEK0A-c5izhL3fxFxLw8inYnU1AzyiOQIBsiirkRm2TTiGVBnYiBhKSEFPdH0oNyM5omgKTUAjXo5yLOeyJJk3XW9AXsS5hQRkJaVtD2Kk23T5cZGh8kXHGmuBrAP4Qj0qyO_IF2LueyBu7QDKW52peb7OefQGeWRPK')"></div>
+<div>
+<p class="text-black dark:text-white text-lg font-semibold leading-normal">Judul Proyek Tiga</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal mt-2">Deskripsi singkat proyek ketiga, menyoroti teknologi yang digunakan dan tujuannya.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 lg:py-24">
+<div class="container mx-auto px-4 sm:px-6">
+<div class="bg-gray-100 dark:bg-[#1c252f] rounded-xl p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center gap-8">
+<div class="md:w-2/3 text-center md:text-left">
+<h2 class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">Tentang Saya</h2>
+<p class="text-gray-600 dark:text-gray-300 mt-4 text-base sm:text-lg">
+                                            Saya seorang pengembang yang bersemangat dengan pengalaman membangun aplikasi web yang skalabel dan efisien. Saya suka belajar teknologi baru dan memecahkan masalah yang kompleks. Di luar coding, saya menikmati hiking dan fotografi.
+                                        </p>
+<button class="mt-6 flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors mx-auto md:mx-0">
+<span class="truncate">Baca Lebih Lanjut</span>
+</button>
+</div>
+<div class="md:w-1/3 flex justify-center">
+<div class="w-48 h-48 sm:w-56 sm:h-56 rounded-full bg-center bg-no-repeat aspect-square bg-cover" data-alt="Foto programmer Alex tersenyum" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmTyTeo6G1lOczwCySkVq_6XjXRJiKNWyeOUtQ6u4zU3jvSf5NuSYkKHx8Ja_l4-mSltKftzM_DcOamrWyEJ56e2seVqfzRpCIpoSFIP4YdZ3HV6nBzzwcd1hwpWZtNpJVV8-2rwfqwXVOu5prsjzo6GfECJAHrJCCbDyCvT2y_ctzBJFDJO9D0cD7eqHBWx29OEyoDCSyJbOa--t367T3lsYfZZUiJBuhrTRHiHcbu7NUGobzGq37Pf-TTZu44iror6I16_zuNFrD");'></div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-[#151d25]">
+<div class="container mx-auto px-4 sm:px-6 text-center">
+<h2 class="text-black dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">Hubungi Saya</h2>
+<p class="text-gray-600 dark:text-gray-300 mt-4 text-base sm:text-lg max-w-2xl mx-auto">
+                                    Saya selalu terbuka untuk mendiskusikan proyek baru atau peluang kolaborasi. Jangan ragu untuk menghubungi saya.
+                                </p>
+<a class="mt-8 inline-block min-w-[120px] max-w-[480px] cursor-pointer rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors pt-3" href="mailto:email@example.com">Kirim Email</a>
+</div>
+</section>
+</main>
+<footer class="border-t border-solid border-gray-200 dark:border-b-[#283039] py-8">
+<div class="container mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+<p class="text-gray-600 dark:text-gray-400 text-sm">© 2024 Reza. Hak Cipta Dilindungi.</p>
+<div class="flex items-center gap-4">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">code</span>
+</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">link</span>
+</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">alternate_email</span>
+</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>
